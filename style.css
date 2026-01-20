@@ -1,0 +1,450 @@
+:root {
+  --navy: #0f172a;
+  --gold: #d4af37;
+  --gray: #f8fafc;
+  --text: #334155;
+}
+
+/* RESET & GLOBAL SAFETY */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden; /* ANTI zoom & geser horizontal */
+  background: var(--gray);
+  color: var(--text);
+}
+
+/* =========================
+   HEADER VIDEO (TERKUNCI)
+========================= */
+.header-video {
+  position: relative;
+  width: 100%;
+  height: 75vh;          /* batas tinggi */
+  max-height: 700px;     /* tidak kebablasan */
+  min-height: 480px;     /* tetap proporsional */
+  overflow: hidden;      /* KUNCI video */
+}
+
+.header-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* potong rapi */
+  object-position: center;
+}
+
+/* overlay gelap */
+.header-video .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.65);
+  z-index: 1;
+}
+
+/* konten header */
+.header-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.header-content h1 {
+  font-size: 48px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.header-content p {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 700px;
+}
+
+/* =========================
+   SECTION GENERAL
+========================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  display: block;
+  margin-top: 8px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about {
+  background: #ffffff;
+}
+
+.about p {
+  max-width: 850px;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px;
+  border-top: 4px solid var(--gold);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.card ul {
+  padding-left: 18px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(22,163,74,0.3);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #020617;
+  color: #cbd5f5;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 34px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+  }
+
+  .header-video {
+    height: 65vh;
+    min-height: 420px;
+  }
+}
+
+/* =========================
+   NAVBAR
+========================= */
+html {
+  scroll-behavior: smooth; /* smooth scroll */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-menu a:hover {
+  color: var(--gold);
+}
+
+.nav-cta {
+  background: #25d366;
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* offset biar scroll tidak ketutup navbar */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* MOBILE MODE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: rgba(2, 6, 23, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 25px 0;
+    display: none; /* SEMBUNYI */
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+/* =========================
+   CONTACT & SOCIAL
+========================= */
+#kontak p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#kontak i {
+  color: var(--gold);
+  margin-right: 8px;
+}
+
+#kontak a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.social {
+  margin-top: 20px;
+}
+
+.social a {
+  font-size: 22px;
+  color: var(--navy);
+  margin-right: 15px;
+}
+
+.social a:hover {
+  color: var(--gold);
+}
+
+/* =========================
+   FLOATING BOT BUTTON
+========================= */
+.bot-float {
+  position: fixed;
+  bottom: 90px; /* di atas WA jika ada */
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+.bot-float i {
+  font-size: 18px;
+  color: var(--gold);
+}
+
+.bot-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* Mobile: icon only biar tidak ganggu layar */
+@media (max-width: 768px) {
+  .bot-float span {
+    display: none;
+  }
+
+  .bot-float {
+    padding: 14px;
+    border-radius: 50%;
+  }
+}
+/* =========================
+   CHATBOT POPUP
+========================= */
+.chatbot {
+  position: fixed;
+  bottom: 160px;
+  right: 20px;
+  width: 300px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  overflow: hidden;
+  display: none;
+  z-index: 1000;
+}
+
+.chatbot-header {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #fff;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.chatbot-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chatbot-body {
+  padding: 15px;
+}
+
+.bot-msg {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.bot-options button {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.bot-options button:hover {
+  background: var(--gold);
+  color: #020617;
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+  .chatbot {
+    width: 90%;
+    right: 5%;
+  }
+}

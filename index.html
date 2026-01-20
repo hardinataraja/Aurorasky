@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurorasky | Biro Jasa Perizinan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  
+  <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">Aurorasky</div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#tentang">Tentang Kami</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#cara-kerja">Cara Kerja</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+      <li>
+        <a href="https://wa.me/6282111887939" target="_blank" class="nav-cta">
+          Konsultasi WA
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+ <header class="header-video">
+  <video autoplay muted loop playsinline>
+    <source src="video/aurorasky.mp4" type="video/mp4">
+    Browser Anda tidak mendukung video.
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="header-content">
+    <h1>Aurorasky</h1>
+    <p>Solusi Perizinan Legal & Profesional Tanpa Ribet</p>
+  </div>
+</header>
+  
+  <section class="about">
+  <div class="container">
+    <h2>Tentang Kami</h2>
+    <p>
+      <strong>Aurorasky</strong> adalah biro jasa pengurusan perizinan yang membantu
+      individu dan pelaku usaha dalam mengurus berbagai kebutuhan legal secara
+      cepat, aman, dan terpercaya.
+    </p>
+    <p>
+      Kami fokus pada kemudahan proses, transparansi biaya, dan pendampingan
+      sampai izin selesai tanpa ribet.
+    </p>
+  </div>
+</section>
+
+  <main class="container">
+    <h2>Layanan Kami</h2>
+    <div id="serviceList" class="grid"></div>
+  </main>
+ 
+  <section id="cara-kerja" class="about">
+  <div class="container">
+    <h2>Cara Kerja</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1. Konsultasi</h3>
+        <p>Hubungi kami melalui WhatsApp untuk konsultasi kebutuhan perizinan.</p>
+      </div>
+
+      <div class="card">
+        <h3>2. Lengkapi Persyaratan</h3>
+        <p>Kami bantu cek dan lengkapi dokumen yang dibutuhkan.</p>
+      </div>
+
+      <div class="card">
+        <h3>3. Proses Pengurusan</h3>
+        <p>Tim kami memproses perizinan sesuai prosedur yang berlaku.</p>
+      </div>
+
+      <div class="card">
+        <h3>4. Izin Selesai</h3>
+        <p>Izin selesai dan diserahkan kepada klien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <section id="kontak" class="about">
+  <div class="container">
+    <h2>Kontak Kami</h2>
+
+    <p>
+      <i class="fas fa-map-marker-alt"></i>
+      Jl. Sunset Road No. 88, Bali
+    </p>
+
+    <p>
+      <i class="fab fa-whatsapp"></i>
+      <a href="https://wa.me/6281234567890" target="_blank">
+        +62 812-3456-7890
+      </a>
+    </p>
+
+    <div class="social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+    <p>© 2026 Aurorasky. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <button class="bot-float" id="botFloat">
+  <i class="fas fa-robot"></i>
+  <span>Agen Bot</span>
+</button>
+  <!-- CHATBOT POPUP -->
+<div class="chatbot" id="chatbot">
+  <div class="chatbot-header">
+    <span>🤖 Agen Bot Aurorasky</span>
+    <button id="closeChat">✕</button>
+  </div>
+
+  <div class="chatbot-body">
+    <div class="bot-msg">
+      Halo 👋<br>
+      Saya Agen Bot Aurorasky.<br>
+      Ada yang bisa kami bantu?
+    </div>
+
+    <div class="bot-options">
+      <button data-msg="Saya ingin konsultasi izin usaha">Konsultasi Izin Usaha</button>
+      <button data-msg="Saya ingin tanya layanan perizinan">Info Layanan</button>
+      <button data-msg="Saya ingin langsung chat admin">Chat Admin</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
