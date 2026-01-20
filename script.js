@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  const whatsappNumber = "6282111887939";
+  const whatsappNumber = "6281238490133";
   const serviceList = document.getElementById("serviceList");
 
   if (serviceList) {
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatbot = document.getElementById("chatbot");
   const closeChat = document.getElementById("closeChat");
   const botOptions = document.querySelectorAll(".bot-options button");
-  const waNumber = "6282111887939";
+  const waNumber = "6281238490133";
 
   if (botButton && chatbot) {
     botButton.addEventListener("click", () => {
