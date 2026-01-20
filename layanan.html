@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Layanan | Aurorasky</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">Aurorasky</div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="layanan.html" class="active">Layanan</a></li>
+      <li>
+        <a href="https://wa.me/6281234567890" target="_blank" class="nav-cta">
+          Konsultasi WA
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="header simple-header">
+  <h1>Daftar Layanan Perizinan</h1>
+  <p>Pilih layanan yang Anda butuhkan, kami bantu sampai selesai</p>
+</header>
+
+<!-- LIST LAYANAN -->
+<section class="container">
+  <div class="grid">
+
+    <div class="card">
+      <h3>Pengurusan NIB (OSS)</h3>
+      <p>Pengurusan Nomor Induk Berusaha untuk UMKM dan badan usaha.</p>
+      <ul>
+        <li>KTP & NPWP</li>
+        <li>Data Usaha</li>
+        <li>Email & Nomor Aktif</li>
+      </ul>
+      <a href="https://wa.me/6281234567890?text=Saya ingin mengurus NIB" target="_blank" class="btn">
+        Ajukan via WhatsApp
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Izin Usaha Pariwisata</h3>
+      <p>Pengurusan izin usaha di bidang pariwisata dan hospitality.</p>
+      <ul>
+        <li>NIB</li>
+        <li>Surat Domisili</li>
+        <li>Dokumen Pendukung</li>
+      </ul>
+      <a href="https://wa.me/6281234567890?text=Saya ingin mengurus izin usaha pariwisata" target="_blank" class="btn">
+        Ajukan via WhatsApp
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Izin Operasional Usaha</h3>
+      <p>Pengurusan izin operasional sesuai bidang usaha.</p>
+      <ul>
+        <li>NIB</li>
+        <li>Surat Domisili</li>
+        <li>Legalitas Tambahan</li>
+      </ul>
+      <a href="https://wa.me/6281234567890?text=Saya ingin mengurus izin operasional usaha" target="_blank" class="btn">
+        Ajukan via WhatsApp
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>KITAS & Izin Tinggal</h3>
+      <p>Pengurusan izin tinggal sementara untuk WNA.</p>
+      <ul>
+        <li>Paspor</li>
+        <li>Sponsor</li>
+        <li>Foto & Data Pendukung</li>
+      </ul>
+      <a href="https://wa.me/6281234567890?text=Saya ingin mengurus KITAS" target="_blank" class="btn">
+        Ajukan via WhatsApp
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Perubahan Data Perusahaan</h3>
+      <p>Perubahan alamat, nama usaha, KBLI, dan data legal lainnya.</p>
+      <ul>
+        <li>Akta Perusahaan</li>
+        <li>NIB</li>
+        <li>Dokumen Pendukung</li>
+      </ul>
+      <a href="https://wa.me/6281234567890?text=Saya ingin mengubah data perusahaan" target="_blank" class="btn">
+        Ajukan via WhatsApp
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Layanan Konsultasi Legal</h3>
+      <p>Konsultasi perizinan dan legalitas usaha sebelum pengurusan.</p>
+      <ul>
+        <li>Konsultasi Online</li>
+        <li>Analisa Kebutuhan</li>
+        <li>Rekomendasi Legal</li>
+      </ul>
+      <a href="https://wa.me/6281234567890?text=Saya ingin konsultasi legal usaha" target="_blank" class="btn">
+        Konsultasi via WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Aurorasky. All rights reserved.</p>
+</footer>
+
+<!-- SCRIPT (NAVBAR ONLY) -->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+</script>
+
+</body>
+</html>

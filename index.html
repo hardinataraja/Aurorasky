@@ -4,12 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aurorasky | Biro Jasa Perizinan</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <nav class="navbar">
+
+<!-- NAVBAR -->
+<nav class="navbar">
   <div class="nav-container">
     <div class="logo">Aurorasky</div>
 
@@ -33,12 +38,11 @@
   </div>
 </nav>
 
- <header class="header-video">
+<!-- HEADER VIDEO -->
+<header class="header-video">
   <video autoplay muted loop playsinline>
     <source src="video/aurorasky.mp4" type="video/mp4">
-    Browser Anda tidak mendukung video.
   </video>
-
   <div class="overlay"></div>
 
   <div class="header-content">
@@ -46,8 +50,9 @@
     <p>Solusi Perizinan Legal & Profesional Tanpa Ribet</p>
   </div>
 </header>
-  
-  <section class="about">
+
+<!-- TENTANG KAMI -->
+<section id="tentang" class="about">
   <div class="container">
     <h2>Tentang Kami</h2>
     <p>
@@ -62,12 +67,23 @@
   </div>
 </section>
 
-  <main class="container">
+<!-- LAYANAN -->
+<section id="layanan">
+  <div class="container">
     <h2>Layanan Kami</h2>
     <div id="serviceList" class="grid"></div>
-  </main>
- 
-  <section id="cara-kerja" class="about">
+
+    <!-- TOMBOL LIHAT SEMUA LAYANAN -->
+    <div class="lihat-semua-wrapper">
+      <a href="layanan.html" class="btn btn-outline">
+        Lihat Semua Layanan
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CARA KERJA -->
+<section id="cara-kerja" class="about">
   <div class="container">
     <h2>Cara Kerja</h2>
 
@@ -94,8 +110,9 @@
     </div>
   </div>
 </section>
-  
-  <section id="kontak" class="about">
+
+<!-- KONTAK -->
+<section id="kontak" class="about">
   <div class="container">
     <h2>Kontak Kami</h2>
 
@@ -106,7 +123,7 @@
 
     <p>
       <i class="fab fa-whatsapp"></i>
-      <a href="https://wa.me/6281234567890" target="_blank">
+      <a href="https://wa.me/6282111887939" target="_blank">
         +62 812-3456-7890
       </a>
     </p>
@@ -119,16 +136,18 @@
   </div>
 </section>
 
-  <footer class="footer">
-    <p>© 2026 Aurorasky. All rights reserved.</p>
-  </footer>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Aurorasky. All rights reserved.</p>
+</footer>
 
-  <script src="script.js"></script>
-  <button class="bot-float" id="botFloat">
+<!-- FLOATING BOT -->
+<button class="bot-float" id="botFloat">
   <i class="fas fa-robot"></i>
   <span>Agen Bot</span>
 </button>
-  <!-- CHATBOT POPUP -->
+
+<!-- CHATBOT POPUP -->
 <div class="chatbot" id="chatbot">
   <div class="chatbot-header">
     <span>🤖 Agen Bot Aurorasky</span>
@@ -149,5 +168,9 @@
     </div>
   </div>
 </div>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
 </body>
 </html>
