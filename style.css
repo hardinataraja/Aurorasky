@@ -165,7 +165,24 @@ section h2::after {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(22,163,74,0.3);
 }
+/* =========================
+   LIHAT SEMUA LAYANAN
+========================= */
+.lihat-semua-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
 
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+
+.btn-outline:hover {
+  background: var(--navy);
+  color: #fff;
+}
 /* =========================
    FOOTER
 ========================= */
